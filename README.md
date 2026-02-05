@@ -1,2 +1,3 @@
-# interactive-valentine-proposal-page-with-yes-flow-escaping-no-button-hearts-and
-Exported from Caffeine project: Show provided photo after YES click and update displayed name
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

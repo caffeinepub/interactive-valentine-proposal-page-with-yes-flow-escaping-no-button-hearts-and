@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods or logic.",
+  "feature_evidence.json": "Feature evidence file listing implemented features, affected frontend files, components used, and test IDs.",
+  "frontend-file-summaries.txt": "Text file containing prewritten one‑sentence summaries for key frontend source files.",
+  "frontend/index.css": "Tailwind base CSS defining theme variables and light/dark palettes with global styling.",
+  "frontend/index.html": "HTML entrypoint with root div and script loading the React app.",
+  "frontend/src/App.tsx": "Main app managing three-stage Valentine flow with animations, escaping NO button, meme, and final static photo.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing backend actors based on Internet Identity, invalidating related queries on change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider handling Internet Identity login, stored identities, and status tracking.",
+  "frontend/src/index.css": "Full Valentine-themed stylesheet with gradients, floating hearts, animations, and styling for all app stages.",
+  "frontend/src/main.tsx": "App bootstrap setting up React Query, Internet Identity provider, and rendering App.",
+  "frontend/src/valentine/ConfettiBurst.tsx": "Canvas animation component generating heart-based confetti with physics for the YES celebration.",
+  "frontend/src/valentine/HeartsBackground.tsx": "Renders floating heart icons with randomized positions and CSS animations.",
+  "frontend/src/valentine/sfx.ts": "Generates a short ascending success chime using the Web Audio API.",
+  "frontend/src/valentine/useEscapingButton.ts": "Provides logic for a button that jumps to random safe positions when approached.",
+  "frontend/src/valentine/useLocalImageUpload.ts": "Handles local image selection, object URL previewing, and cleanup for uploads.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme extensions, colors, animations, and plugin setup.",
+  "project_state.json": "Stores project metadata, feature requirements, and pending requests for the app."
+}

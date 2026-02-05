@@ -1,0 +1,63 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine YES flow: update name and show provided final photo",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the initial proposal name text with \"Suzanne The Nazareth\" and remove any remaining \"Miss Nazareth\" UI text.",
+      "acceptanceCriteria": [
+        "On the initial screen, the headline reads exactly: \"Will you be my Valentine, Suzanne The Nazareth?\"",
+        "No other visible UI text still says \"Miss Nazareth\""
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the initial stage proposal headline text to exactly \"Will you be my Valentine, Suzanne The Nazareth?\" and ensure no remaining visible string uses \"Miss Nazareth\"."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Make the YES flow transition from celebration/meme stage to a final stage that displays the provided photo (no user upload required), with mobile-safe responsive layout.",
+      "acceptanceCriteria": [
+        "Clicking YES triggers the existing celebration/meme stage, then transitions to the final stage showing aman_suz_pic.jpeg.",
+        "The final stage displays the photo reliably on refresh/reload (i.e., it is served as a static asset, not dependent on runtime local upload).",
+        "The YES flow still works on mobile (iPhone/Android Chrome) without layout overflow or scroll issues."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove the local-upload dependency from the YES flow: keep initial -> celebrating transition, then always transition to final after the existing meme delay, and render the final stage using the static asset at frontend/public/assets/aman_suz_pic.jpeg (no hidden file input and no upload prompts)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Adjust final-stage image/container responsiveness for small screens (e.g., constrain image height to viewport and ensure it scales without overflow) to keep the no-scroll single-screen layout working on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add aman_suz_pic.jpeg as a publicly served frontend asset and reference it from the final stage with existing final image styling.",
+      "acceptanceCriteria": [
+        "The repository includes the image in a publicly served frontend path (e.g., under frontend/public) and the app references it via a stable /assets/... URL.",
+        "The image renders in the final stage with the existing final image styling (frame/border) and fits responsively."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/aman_suz_pic.jpeg",
+          "operation": "create",
+          "description": "Add the provided uploaded image aman_suz_pic.jpeg to the app's publicly served static assets so it is reliably available on refresh/reload."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reference the new static asset (frontend/public/assets/aman_suz_pic.jpeg) as the final-stage image source while keeping the existing final image frame/border styling."
+        }
+      ]
+    }
+  ]
+}

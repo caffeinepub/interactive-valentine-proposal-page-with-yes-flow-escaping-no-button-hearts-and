@@ -1,0 +1,65 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T16:59:28.983Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Update the proposal question text in the initial stage to display the name exactly as: \"Suzanne The Nazareth\" (replacing \"Miss Nazareth\").",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "After the user clicks YES, show the provided uploaded image (aman_suz_pic.jpeg) as the final photo in the YES flow without requiring the user to upload a photo.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Add the uploaded image file aman_suz_pic.jpeg to the frontend static assets and reference it from the final stage UI.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/aman_suz_pic.jpeg",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/index.css",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

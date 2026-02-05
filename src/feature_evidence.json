@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-proposal-question-text-in-the-initial-stage-to-display-the-name-exactly-as-suzanne-the-nazareth-replacing-miss-nazareth",
+      "featureTitle": "Update the proposal question text in the initial stage to display the name exactly as: \"Suzanne The Nazareth\" (replacing \"Miss Nazareth\").",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-after-the-user-clicks-yes-show-the-provided-uploaded-image-aman-suz-pic-jpeg-as-the-final-photo-in-the-yes-flow-without-requiring-the-user-to-upload-a-photo",
+      "featureTitle": "After the user clicks YES, show the provided uploaded image (aman_suz_pic.jpeg) as the final photo in the YES flow without requiring the user to upload a photo.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-uploaded-image-file-aman-suz-pic-jpeg-to-the-frontend-static-assets-and-reference-it-from-the-final-stage-ui",
+      "featureTitle": "Add the uploaded image file aman_suz_pic.jpeg to the frontend static assets and reference it from the final stage UI.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

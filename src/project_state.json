@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Interactive draft app where clicking \"Yes\" triggers follow-up content; user-requested personalization of displayed name and post-\"Yes\" image.",
+  "architectural_notes": [],
+  "known_issues": [
+    "Requested image to display after \"Yes\" is clicked is referenced but not provided in the conversation context."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-update-the-proposal-question-text-in-the-initial-stage-to-display-the-name-exactly-as-suzanne-the-nazareth-replacing-miss-nazareth",
+      "title": "Update the proposal question text in the initial stage to display the name exactly as: \"Suzanne The Nazareth\" (replacing \"Miss Nazareth\").",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-after-the-user-clicks-yes-show-the-provided-uploaded-image-aman-suz-pic-jpeg-as-the-final-photo-in-the-yes-flow-without-requiring-the-user-to-upload-a-photo",
+      "title": "After the user clicks YES, show the provided uploaded image (aman_suz_pic.jpeg) as the final photo in the YES flow without requiring the user to upload a photo.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-image-file-aman-suz-pic-jpeg-to-the-frontend-static-assets-and-reference-it-from-the-final-stage-ui",
+      "title": "Add the uploaded image file aman_suz_pic.jpeg to the frontend static assets and reference it from the final stage UI.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "After the user clicks \"Yes\", display the provided picture.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Change displayed name text to \"Suzanne The Nazareth\" instead of \"Miss Nazareth\".",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Show provided photo after YES click and update displayed name",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

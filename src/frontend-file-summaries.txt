@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main Valentine proposal app with three-stage flow (initial question with \"Suzanne The Nazareth\", celebration with meme, final static photo) featuring YES/NO interaction, confetti, and sound effects without upload functionality.",
+  "frontend/src/valentine/HeartsBackground.tsx": "Decorative component rendering 15 continuously floating hearts with randomized positions and CSS animations.",
+  "frontend/src/valentine/ConfettiBurst.tsx": "Canvas-based celebratory heart-burst animation with physics (gravity, velocity) triggered on YES click.",
+  "frontend/src/valentine/useEscapingButton.ts": "Hook managing playful NO button escape behavior with collision detection and viewport-constrained random repositioning.",
+  "frontend/src/valentine/useLocalImageUpload.ts": "Hook for client-side image file selection and preview using object URLs, returning input props object instead of JSX component to avoid TypeScript parsing issues.",
+  "frontend/src/valentine/sfx.ts": "Web Audio API utility generating a sweet ascending tone sequence for YES click sound effect.",
+  "frontend/src/index.css": "Complete romantic pink/white theme with OKLCH colors, gradient backgrounds, floating hearts animation, responsive layouts with mobile-optimized final image constraints to prevent overflow.",
+  "frontend/tailwind.config.js": "Tailwind configuration with romantic color palette, custom font families (serif for romantic feel), and extended design tokens."
+}

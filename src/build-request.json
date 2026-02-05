@@ -1,0 +1,82 @@
+{
+  "kind": "build_request",
+  "title": "Show provided photo after YES click and update displayed name",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the proposal question text in the initial stage to display the name exactly as: \"Suzanne The Nazareth\" (replacing \"Miss Nazareth\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Put the name as \"Suzanne The Nazareth\" instead of Miss Nazareth"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the initial screen, the headline reads exactly: \"Will you be my Valentine, Suzanne The Nazareth?\"",
+        "No other visible UI text still says \"Miss Nazareth\""
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "After the user clicks YES, show the provided uploaded image (aman_suz_pic.jpeg) as the final photo in the YES flow without requiring the user to upload a photo.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "put this picture after Yes is clicked"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking YES triggers the existing celebration/meme stage, then transitions to the final stage showing aman_suz_pic.jpeg.",
+        "The final stage displays the photo reliably on refresh/reload (i.e., it is served as a static asset, not dependent on runtime local upload).",
+        "The YES flow still works on mobile (iPhone/Android Chrome) without layout overflow or scroll issues."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add the uploaded image file aman_suz_pic.jpeg to the frontend static assets and reference it from the final stage UI.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "put this picture after Yes is clicked"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The repository includes the image in a publicly served frontend path (e.g., under frontend/public) and the app references it via a stable /assets/... URL.",
+        "The image renders in the final stage with the existing final image styling (frame/border) and fits responsively."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui or any other frontend immutable paths listed in SYSTEM_CONTEXT.",
+    "Keep the backend as-is (no new Motoko methods/state) unless strictly required for this UI-only change."
+  ],
+  "nonGoals": [
+    "Adding Internet Identity login or any new authentication features.",
+    "Implementing backend image upload/storage.",
+    "Changing the meme image or confetti/sound behavior beyond what is necessary to show the provided photo after YES."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
